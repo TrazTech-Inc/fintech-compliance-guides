@@ -16,6 +16,8 @@ Security serves as the mandatory criterion for all SOC 2 reports. Fintech compan
 - **Confidentiality** – protecting account numbers, KYC data, and transaction records
 - **Processing Integrity** – essential if the product calculates balances, executes trades, or reconciles payments
 
+The fifth criterion, **Privacy**, addresses personal information collection, use, retention, and disposal. It is less commonly scoped in fintech SOC 2 engagements but may be relevant when products collect or process significant consumer PII beyond what payment processing requires.
+
 Type I provides point-in-time validation of control design. Type II demonstrates that controls operated effectively over an extended period (typically 3-12 months). Most enterprise and banking buyers eventually require Type II, though Type I can unblock immediate deals while Type II observation windows proceed in parallel.
 
 ## Step 2: Conducting a Fixed-Scope Gap Analysis
@@ -141,3 +143,5 @@ Clean SOC 2 reports satisfy most security questionnaire items, after which banki
 - Whether customer data leaves Canada
 
 Canadian fintech companies serving Quebec residents should document privacy impact assessments before banks request them, as Law 25 requires these for certain cross-border personal information transfers.
+
+Last updated: September 2026

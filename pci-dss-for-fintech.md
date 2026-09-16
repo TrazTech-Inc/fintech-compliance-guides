@@ -17,7 +17,7 @@ PCI DSS obligations scale with annual transaction volume across the four card br
 - Merchants processing under approximately six million transactions annually typically self-assess
 - Service providers face lower thresholds (300,000 transactions annually) requiring Self-Assessment Questionnaire (SAQ) completion
 - Higher volume or risk profiles necessitate full Report on Compliance by a qualified security assessor
-- Fintech companies providing payment processing, gateway, or tokenization services typically qualify as Level 1 service providers regardless of volume
+- Fintech companies providing payment processing, gateway, or tokenization services frequently qualify as Level 1 service providers due to transaction volume or acquirer requirements
 
 Confirm your classification with your acquirer or payment partner before beginning scope definition. Incorrect level assumptions waste weeks.
 
@@ -37,7 +37,7 @@ Every removed system reduces controls requiring testing, penetration test scope,
 
 After scope definition, map current controls against the 12 PCI DSS requirements:
 
-1. Firewall configuration
+1. Network security controls
 2. Vendor default credentials removal
 3. Cardholder data protection
 4. Encryption in transit
@@ -110,7 +110,7 @@ Fintechs skipping scope reduction and attempting to bring entire production envi
 
 Organizations previously assessed against v3.2.1 that subsequently deferred updates operate from outdated frameworks. Version 4.0.1 represents the current standard, with previously future-dated requirements becoming mandatory on March 31, 2025. These items require engineering work rather than policy modifications:
 
-- **Requirement 8.4.2**: Multi-factor authentication extends to all cardholder data environment access (not just administrative/remote access), requiring service account and internal jump path rework
+- **Requirement 8.4.2**: Multi-factor authentication extends to all non-console access to the cardholder data environment (not just administrative/remote access), requiring internal access path rework. Automated application and system accounts performing programmatic functions are excluded
 - **Requirements 6.4.3 and 11.6.1**: Script inventory on payment pages becomes mandatory, including scripts loaded during card capture, justifications for each, and unauthorized page header/script content detection mechanisms
 - **Requirement 12.3.1**: Targeted risk analyses justify any self-selected control frequencies, reviewed annually
 - **Requirement 3.4.2**: Copy and paste/export of PANs during remote access sessions requires documented business justification
@@ -158,3 +158,5 @@ If PCI DSS compliance lies eighteen months ahead (payments feature unshipped), a
 Version 4 emphasizes business-as-usual operations, making compliance dates floors rather than finish lines. Service providers confirm scope every six months (requirement 12.5.2.1), and significant environmental changes trigger independent scope reviews. Targeted risk analyses require annual review. Segmentation testing operates on its own schedule. Quarterly approved scanning vendor scans demand passing results; failed scans followed by rescans differ from quarters without scans—the latter creates gaps unfixable retroactively.
 
 The common failure pattern: March validation, July payment flow deployment routing card data outside assessed boundaries, January discovery that six months of evidence fails to cover actual environment operations. Assign six-monthly scope confirmation to a named person with calendar entries and written outputs; treat payment path changes as scope confirmation triggers. This practice prevents most repeat-year rework.
+
+Last updated: September 2026
